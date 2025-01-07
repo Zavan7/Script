@@ -5,7 +5,7 @@ executables = [Executable("script.py")]
 
 setup(
     name="MeuPrograma",
-    version="1.0.1",
+    version="1.0.2",
     description="Meu script para BF, facilitando tarefas do dia a dia",
     executables=executables,
 )

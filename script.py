@@ -183,6 +183,7 @@ while True:
                 print("Opção inválida, tente novamente.")
 
     elif escolha == '4':
+        contrato = input('Digite o contrato a ser refinanciado: ')
         entrada_input = obter_valor_formatado('Digite o valor da entrada (Se não tiver, digite 0): R$ ')
         ho = float(input('Digite a porcentagem de HO da entrada: '))
         parcela_entrada = int(input('Digite a parcela relacionada à entrada (Se não tiver, digite 0): '))
@@ -194,9 +195,13 @@ while True:
         entrada = entrada_input + (entrada_input * ho / 100)
 
         if entrada == 0 and parcela_entrada == 0:
+            print('\nEntro em contato as respeito do contrato: {contrato}.')
             print(f'\n*Sem entrada, com {novas_parcelas} parcelas de {formatar_valor(novo_valor)}, com a carência de {carencia} dias.*')
+            print('\nNessas condições, deseja continuar com o refinanciamento?')
         else:
+            print('\nEntro em contato as respeito do contrato: {contrato}.')
             print(f'\n*Entrada de {formatar_valor(entrada)}, referente à parcela {parcela_entrada}, com {novas_parcelas} parcelas de {formatar_valor(novo_valor)}, com a carência de {carencia} dias.*')
+            print('\nNessas condições, deseja continuar com o refinanciamento?')
 
     elif escolha == '5':
         contrato = int(input('Digite o contrato a ser ratificado: '))
